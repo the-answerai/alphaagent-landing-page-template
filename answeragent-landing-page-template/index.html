@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Loading...</title>
+  <meta name="description" id="page-description" content="">
+
+  <!-- GTM placeholder — injected by JS from data.json -->
+  <script id="gtm-head-script"></script>
+
+  <!-- Apollo tracking placeholder — injected by JS from data.json -->
+  <script id="apollo-script"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Roboto',-apple-system,sans-serif;background:#FAFAFC;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+    /* CSS vars — overwritten by JS using data.json brand values */
+    :root{
+      --primary:#16074c;
+      --secondary:#484e7f;
+      --accent:#b94aa8;
+      --highlight:#35a5aa;
+      --highlight-light:#e6f5f5;
+      --primary-light:#f0eef6;
+      --accent-light:#faf0f8;
+      --gold-light:rgba(196,151,59,0.08);
+      --white:#fff;
+      --gray:#6b7280;
+      --light:#fafafc;
+      --radius:16px;
+    }
+
+    .container{max-width:1200px;margin:0 auto;padding:0 24px}
+    .section{padding:100px 0}
+    .s-label{font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--highlight);margin-bottom:14px}
+    .s-title{font-size:clamp(30px,4.5vw,50px);font-weight:900;line-height:1.12;letter-spacing:-1.5px;color:var(--primary);margin-bottom:18px}
+    .s-sub{font-size:17px;line-height:1.75;color:var(--secondary);max-width:600px;opacity:0.7}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:16px 34px;border-radius:50px;font-weight:700;font-size:15px;text-decoration:none;transition:all 0.3s;border:none;cursor:pointer}
+    .btn-cta{background:var(--accent);color:#fff;box-shadow:0 4px 20px rgba(0,0,0,0.2)}
+    .btn-cta:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,0.25)}
+    .btn-outline{background:transparent;color:var(--primary);border:2px solid rgba(72,78,127,0.2)}
+    .btn-outline:hover{border-color:var(--highlight);color:var(--highlight)}
+    .arrow{width:16px;height:16px}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;transition:all 0.3s}
+    nav.scrolled{background:rgba(250,250,252,0.95);backdrop-filter:blur(20px);box-shadow:0 1px 0 rgba(0,0,0,0.04)}
+    .nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+    .nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .nav-brand .wolf{font-size:28px}
+    .nav-brand span{font-weight:900;font-size:18px;color:var(--primary)}
+    .nav-brand .for{font-weight:400;color:var(--secondary);opacity:0.5;font-size:14px;margin-left:4px}
+    .nav-brand .biz{font-weight:700;color:var(--highlight)}
+    .nav-links{display:flex;align-items:center;gap:28px}
+    .nav-links a{font-size:14px;font-weight:500;color:var(--secondary);text-decoration:none;opacity:0.7;transition:0.2s}
+    .nav-links a:hover{opacity:1;color:var(--primary)}
+    .nav-cta{padding:10px 22px;background:var(--accent);color:#fff;border-radius:50px;font-size:13px;font-weight:700;text-decoration:none;transition:0.3s}
+    .nav-cta:hover{opacity:0.85}
+
+    /* HERO */
+    .hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(160deg,var(--primary) 0%,#2a1a5e 40%,var(--secondary) 100%)}
+    .hero *{color:#fff}
+    .hero-content{position:relative;z-index:2;max-width:700px}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:50px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);font-size:13px;font-weight:500;margin-bottom:28px}
+    .hero-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--highlight);animation:pulse 2s infinite}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+    .hero h1{font-size:clamp(40px,6vw,68px);font-weight:900;line-height:1.08;letter-spacing:-2.5px;margin-bottom:22px}
+    .hero h1 .accent{color:var(--highlight)}
+    .hero p{font-size:19px;line-height:1.75;opacity:0.65;margin-bottom:36px;max-width:560px}
+    .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+    .hero .btn-cta{background:var(--accent);box-shadow:0 4px 24px rgba(0,0,0,0.3)}
+    .hero .btn-outline{color:#fff;border-color:rgba(255,255,255,0.2)}
+    .hero .btn-outline:hover{border-color:var(--highlight);color:var(--highlight)}
+    .hero-stats{display:flex;gap:44px;margin-top:56px;padding-top:36px;border-top:1px solid rgba(255,255,255,0.1)}
+    .hero-stats .val{font-size:34px;font-weight:900;color:var(--highlight)}
+    .hero-stats .lbl{font-size:12px;opacity:0.45;margin-top:2px;letter-spacing:0.5px}
+    .hero-glow{position:absolute;right:-200px;top:50%;transform:translateY(-50%);width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(53,165,170,0.15),transparent 65%)}
+    .hero-glow2{position:absolute;left:-100px;bottom:-200px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(185,74,168,0.1),transparent 65%)}
+
+    /* PAIN */
+    .pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:48px}
+    .pain-card{padding:32px;border-radius:var(--radius);background:var(--white);border:1px solid rgba(0,0,0,0.04);transition:all 0.35s}
+    .pain-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,0.06);border-color:rgba(53,165,170,0.15)}
+    .pain-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:18px}
+    .pain-card h3{font-size:18px;font-weight:700;margin-bottom:8px;color:var(--primary)}
+    .pain-card p{font-size:14px;line-height:1.7;color:var(--secondary);opacity:0.6}
+
+    /* CHAT */
+    .chat-window{max-width:720px;margin:48px auto 0;background:var(--primary);border-radius:20px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,0.2)}
+    .chat-header{padding:16px 24px;border-bottom:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;gap:10px}
+    .chat-header .dot{width:10px;height:10px;border-radius:50%}
+    .chat-header span{color:rgba(255,255,255,0.4);font-size:13px;margin-left:8px}
+    .chat-body{padding:24px;display:flex;flex-direction:column;gap:14px}
+    .chat-msg{max-width:82%;padding:14px 20px;border-radius:16px;font-size:14px;line-height:1.65}
+    .chat-user{align-self:flex-end;background:var(--accent);color:#fff;border-radius:16px 16px 4px 16px}
+    .chat-agent{align-self:flex-start;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.85);border-radius:4px 16px 16px 16px}
+    .chat-agent strong{color:#fff}
+    .chat-agent .done{color:var(--highlight);font-weight:700}
+
+    /* SOLUTIONS */
+    .sol-list{margin-top:56px;display:flex;flex-direction:column;gap:0}
+    .sol-item{display:grid;grid-template-columns:80px 1fr;gap:28px;padding:48px 0;border-bottom:1px solid rgba(0,0,0,0.04);align-items:start}
+    .sol-item:last-child{border:none}
+    .sol-num{font-size:56px;font-weight:900;color:var(--highlight);opacity:0.15;line-height:1}
+    .sol-item h3{font-size:24px;font-weight:700;color:var(--primary);margin-bottom:10px}
+    .sol-item p{font-size:15px;line-height:1.75;color:var(--secondary);opacity:0.65;margin-bottom:14px}
+    .sol-tag{display:inline-block;padding:6px 14px;border-radius:8px;font-size:12px;font-weight:600;background:var(--highlight-light);color:var(--highlight);border:1px solid rgba(53,165,170,0.15)}
+
+    /* ROI */
+    .roi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px}
+    .roi-card{text-align:center;padding:40px 20px;border-radius:var(--radius);background:var(--white);border:1px solid rgba(0,0,0,0.04)}
+    .roi-card .val{font-size:48px;font-weight:900;color:var(--accent)}
+    .roi-card .lbl{font-size:13px;color:var(--secondary);opacity:0.6;margin-top:6px;white-space:pre-line}
+
+    /* INTEGRATIONS */
+    .pills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:36px}
+    .pill{padding:12px 22px;border-radius:50px;background:var(--white);border:1px solid rgba(0,0,0,0.05);font-size:14px;font-weight:500;color:var(--secondary);display:flex;align-items:center;gap:8px}
+
+    /* SECURITY */
+    .sec-badges{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:32px}
+    .sec-badge{padding:10px 20px;border-radius:50px;font-size:13px;font-weight:600;display:flex;align-items:center;gap:6px}
+
+    /* CTA */
+    .cta-section{text-align:center;padding:120px 24px;background:linear-gradient(160deg,var(--primary) 0%,#2a1a5e 50%,var(--secondary) 100%);color:#fff;position:relative;overflow:hidden}
+    .cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(53,165,170,0.12),transparent 60%)}
+    .cta-section>*{position:relative;z-index:1}
+    .cta-section h2{font-size:clamp(34px,5vw,56px);font-weight:900;letter-spacing:-2px;margin-bottom:18px;color:#fff}
+    .cta-section h2 .accent{color:var(--highlight)}
+    .cta-section p{font-size:18px;color:rgba(255,255,255,0.5);margin-bottom:36px;max-width:480px;margin-left:auto;margin-right:auto}
+    .cta-section .sub{margin-top:20px;font-size:14px;color:rgba(255,255,255,0.35)}
+
+    footer{text-align:center;padding:40px 24px;font-size:13px;color:var(--gray);border-top:1px solid rgba(0,0,0,0.04)}
+    footer a{color:var(--highlight);text-decoration:none}
+
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+
+    @media(max-width:768px){
+      .hero-stats{flex-direction:column;gap:20px}
+      .roi-grid{grid-template-columns:1fr 1fr}
+      .sol-item{grid-template-columns:1fr}
+      .sol-num{font-size:36px}
+      .hero-ctas{flex-direction:column}
+      .btn{width:100%;justify-content:center}
+      .nav-links{display:none}
+      .hero-glow,.hero-glow2{display:none}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand" id="nav-brand">
+        <!-- Injected by JS -->
+      </a>
+      <div class="nav-links" id="nav-links">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-glow2"></div>
+    <div class="container">
+      <div class="hero-content" id="hero-content">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- PAIN POINTS -->
+  <section class="section" id="challenges">
+    <div class="container">
+      <div class="s-label reveal" id="pain-label"></div>
+      <div class="s-title reveal" id="pain-title"></div>
+      <p class="s-sub reveal" id="pain-sub"></p>
+      <div class="pain-grid" id="pain-grid">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAT DEMO -->
+  <section class="section" style="background:var(--white)">
+    <div class="container" style="text-align:center">
+      <div class="s-label reveal" id="chat-label"></div>
+      <div class="s-title reveal" id="chat-title"></div>
+      <p class="s-sub reveal" style="margin:0 auto" id="chat-sub"></p>
+      <div class="chat-window reveal">
+        <div class="chat-header">
+          <div class="dot" style="background:#FF5F57"></div>
+          <div class="dot" style="background:#FEBC2E"></div>
+          <div class="dot" style="background:#28C840"></div>
+          <span id="chat-window-title"></span>
+        </div>
+        <div class="chat-body" id="chat-body">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTIONS -->
+  <section class="section" id="solutions">
+    <div class="container">
+      <div class="s-label reveal" id="sol-label"></div>
+      <div class="s-title reveal" id="sol-title"></div>
+      <div class="sol-list" id="sol-list">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ROI -->
+  <section class="section" id="roi" style="background:var(--white)">
+    <div class="container" style="text-align:center">
+      <div class="s-label reveal" id="roi-label"></div>
+      <div class="s-title reveal" id="roi-title"></div>
+      <div class="roi-grid" id="roi-grid">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- INTEGRATIONS -->
+  <section class="section">
+    <div class="container" style="text-align:center">
+      <div class="s-label reveal" id="int-label"></div>
+      <div class="s-title reveal" id="int-title"></div>
+      <p class="s-sub reveal" style="margin:0 auto" id="int-sub"></p>
+      <div class="pills reveal" id="int-pills">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- SECURITY -->
+  <section class="section" style="background:var(--white)">
+    <div class="container" style="text-align:center">
+      <div class="s-label reveal" id="sec-label"></div>
+      <div class="s-title reveal" id="sec-title"></div>
+      <p class="s-sub reveal" style="margin:0 auto" id="sec-sub"></p>
+      <div class="sec-badges reveal" id="sec-badges">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="s-label reveal" id="cta-label" style="color:var(--highlight);opacity:0.7"></div>
+    <h2 class="reveal" id="cta-title"></h2>
+    <p class="reveal" id="cta-sub"></p>
+    <div class="reveal">
+      <a href="#" class="btn btn-cta" id="cta-primary" style="font-size:17px;padding:18px 44px">
+        <span id="cta-primary-text"></span>
+        <svg class="arrow" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+    </div>
+    <div class="reveal" style="margin-top:16px">
+      <a href="#" class="btn btn-outline" id="cta-secondary" style="color:rgba(255,255,255,0.6);border-color:rgba(255,255,255,0.15)"></a>
+    </div>
+    <div class="sub reveal" id="cta-fine"></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer"></footer>
+
+  <!-- GTM body noscript placeholder -->
+  <noscript id="gtm-body-noscript"></noscript>
+
+  <script>
+    // ─── COLOUR HELPERS ──────────────────────────────────────────────────────
+    function applyBrandColors(brand) {
+      const root = document.documentElement;
+      root.style.setProperty('--primary',   brand.primary_color);
+      root.style.setProperty('--secondary', brand.secondary_color);
+      root.style.setProperty('--accent',    brand.accent_color);
+      root.style.setProperty('--highlight', brand.highlight_color);
+      if (brand.highlight_light) root.style.setProperty('--highlight-light', brand.highlight_light);
+      if (brand.primary_light)   root.style.setProperty('--primary-light',   brand.primary_light);
+      if (brand.accent_light)    root.style.setProperty('--accent-light',    brand.accent_light);
+    }
+
+    // ─── TRACKING ────────────────────────────────────────────────────────────
+    function injectGTM(gtm_id) {
+      if (!gtm_id || gtm_id === 'GTM-XXXXXXX') return;
+      // Head snippet
+      const headScript = document.createElement('script');
+      headScript.textContent = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${gtm_id}');`;
+      document.head.appendChild(headScript);
+      // Body noscript
+      const ns = document.getElementById('gtm-body-noscript');
+      if (ns) ns.innerHTML = `<iframe src="https://www.googletagmanager.com/ns.html?id=${gtm_id}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`;
+    }
+
+    function injectApollo(snippet) {
+      if (!snippet) return;
+      const s = document.createElement('script');
+      s.textContent = snippet;
+      document.head.appendChild(s);
+    }
+
+    // ─── ICON BG MAP ─────────────────────────────────────────────────────────
+    const iconBgMap = {
+      accent_light:    'var(--accent-light)',
+      highlight_light: 'var(--highlight-light)',
+      primary_light:   'var(--primary-light)',
+      gold_light:      'var(--gold-light)',
+    };
+
+    const secColorMap = {
+      highlight: { bg: 'var(--highlight-light)', color: 'var(--highlight)' },
+      primary:   { bg: 'var(--primary-light)',   color: 'var(--primary)'   },
+      accent:    { bg: 'var(--accent-light)',     color: 'var(--accent)'    },
+      gold:      { bg: 'var(--gold-light)',       color: '#b8860b'          },
+    };
+
+    // ─── MAIN RENDER ─────────────────────────────────────────────────────────
+    async function applyData() {
+      let data;
+      try {
+        const res = await fetch('data.json');
+        data = await res.json();
+      } catch(e) {
+        console.warn('data.json not found, page will render empty. Make sure data.json is in the same directory.', e);
+        return;
+      }
+
+      const { meta, brand, nav, hero, pain_points, chat_demo,
+              solutions, roi, integrations, security, cta, footer } = data;
+
+      // META
+      document.getElementById('page-title').textContent       = meta.title;
+      document.getElementById('page-description').content     = meta.description;
+
+      // TRACKING
+      injectGTM(meta.gtm_id);
+      injectApollo(meta.apollo_snippet);
+
+      // BRAND COLORS
+      applyBrandColors(brand);
+
+      // ── NAV ────────────────────────────────────────────────────────────────
+      document.getElementById('nav-brand').innerHTML = `
+        <span class="wolf">${brand.emoji}</span>
+        <span>Alpha Agent <span class="for">for</span> <span class="biz">${brand.name}</span></span>
+      `;
+      const navLinks = document.getElementById('nav-links');
+      navLinks.innerHTML = nav.links.map(l =>
+        `<a href="${l.href}">${l.label}</a>`
+      ).join('') + `<a href="${nav.cta_url}" class="nav-cta">${nav.cta_text}</a>`;
+
+      // ── HERO ───────────────────────────────────────────────────────────────
+      const statsHTML = hero.stats.map(s => `
+        <div><div class="val">${s.val}</div><div class="lbl">${s.lbl}</div></div>
+      `).join('');
+
+      document.getElementById('hero-content').innerHTML = `
+        <div class="hero-badge"><div class="dot"></div>${hero.badge}</div>
+        <h1>${hero.headline}</h1>
+        <p>${hero.subheadline}</p>
+        <div class="hero-ctas">
+          <a href="${hero.cta_primary_url}" class="btn btn-cta">
+            ${hero.cta_primary_text}
+            <svg class="arrow" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </a>
+          <a href="${hero.cta_secondary_href}" class="btn btn-outline">${hero.cta_secondary_text}</a>
+        </div>
+        <div class="hero-stats">${statsHTML}</div>
+      `;
+
+      // ── PAIN POINTS ────────────────────────────────────────────────────────
+      document.getElementById('pain-label').textContent   = pain_points.label;
+      document.getElementById('pain-title').innerHTML     = pain_points.title;
+      document.getElementById('pain-sub').textContent     = pain_points.subtitle;
+      document.getElementById('pain-grid').innerHTML      = pain_points.items.map(item => `
+        <div class="pain-card reveal">
+          <div class="pain-icon" style="background:${iconBgMap[item.icon_bg] || 'var(--highlight-light)'}">${item.icon}</div>
+          <h3>${item.title}</h3>
+          <p>${item.body}</p>
+        </div>
+      `).join('');
+
+      // ── CHAT DEMO ──────────────────────────────────────────────────────────
+      document.getElementById('chat-label').textContent       = chat_demo.label;
+      document.getElementById('chat-title').innerHTML         = chat_demo.title;
+      document.getElementById('chat-sub').textContent         = chat_demo.subtitle;
+      document.getElementById('chat-window-title').textContent= chat_demo.window_title;
+      document.getElementById('chat-body').innerHTML          = chat_demo.messages.map(m =>
+        m.type === 'user'
+          ? `<div class="chat-msg chat-user">${m.text}</div>`
+          : `<div class="chat-msg chat-agent">${m.html}</div>`
+      ).join('');
+
+      // ── SOLUTIONS ──────────────────────────────────────────────────────────
+      document.getElementById('sol-label').textContent = solutions.label;
+      document.getElementById('sol-title').innerHTML   = solutions.title;
+      document.getElementById('sol-list').innerHTML    = solutions.items.map(s => `
+        <div class="sol-item reveal">
+          <div class="sol-num">${s.num}</div>
+          <div>
+            <h3>${s.title}</h3>
+            <p>${s.body}</p>
+            <span class="sol-tag">${s.tag}</span>
+          </div>
+        </div>
+      `).join('');
+
+      // ── ROI ────────────────────────────────────────────────────────────────
+      document.getElementById('roi-label').textContent = roi.label;
+      document.getElementById('roi-title').innerHTML   = roi.title;
+      document.getElementById('roi-grid').innerHTML    = roi.metrics.map(m => `
+        <div class="roi-card reveal">
+          <div class="val">${m.val}</div>
+          <div class="lbl">${m.lbl}</div>
+        </div>
+      `).join('');
+
+      // ── INTEGRATIONS ───────────────────────────────────────────────────────
+      document.getElementById('int-label').textContent = integrations.label;
+      document.getElementById('int-title').innerHTML   = integrations.title;
+      document.getElementById('int-sub').textContent   = integrations.subtitle;
+      document.getElementById('int-pills').innerHTML   = integrations.items.map(i =>
+        `<div class="pill">${i}</div>`
+      ).join('');
+
+      // ── SECURITY ───────────────────────────────────────────────────────────
+      document.getElementById('sec-label').textContent = security.label;
+      document.getElementById('sec-title').innerHTML   = security.title;
+      document.getElementById('sec-sub').textContent   = security.subtitle;
+      document.getElementById('sec-badges').innerHTML  = security.badges.map(b => {
+        const c = secColorMap[b.color_var] || secColorMap.highlight;
+        return `<div class="sec-badge" style="background:${c.bg};color:${c.color}">${b.icon} ${b.text}</div>`;
+      }).join('');
+
+      // ── CTA ────────────────────────────────────────────────────────────────
+      document.getElementById('cta-label').textContent    = cta.label;
+      document.getElementById('cta-title').innerHTML      = cta.title;
+      document.getElementById('cta-sub').textContent      = cta.subtitle;
+      document.getElementById('cta-primary').href         = cta.primary_url;
+      document.getElementById('cta-primary-text').textContent = cta.primary_text;
+      document.getElementById('cta-secondary').href       = cta.secondary_url;
+      document.getElementById('cta-secondary').textContent= cta.secondary_text;
+      document.getElementById('cta-fine').textContent     = cta.fine_print;
+
+      // ── FOOTER ─────────────────────────────────────────────────────────────
+      document.getElementById('footer').innerHTML = `
+        <p>Crafted for <strong style="color:var(--primary)">${footer.business_name}</strong> by
+        <a href="${footer.alphaagent_url}">Alpha Agent</a> ·
+        Built on <a href="${footer.openclaw_url}">OpenClaw</a></p>
+      `;
+
+      // ── SCROLL REVEAL ──────────────────────────────────────────────────────
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); });
+      }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+      document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+      // ── SCROLL NAV ─────────────────────────────────────────────────────────
+      window.addEventListener('scroll', () => {
+        document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+      });
+    }
+
+    applyData();
+  </script>
+</body>
+</html>
