@@ -1,192 +1,184 @@
 {
-    "meta": {
-      "title": "Alpha Agent for OrthoWorks® — AI That Runs Your Practice",
-      "description": "See how Alpha Agent helps OrthoWorks automate patient communication, streamline scheduling, and reduce front-desk overhead across 11 Bay Area locations.",
-      "gtm_id": "GTM-XXXXXXX",
-      "apollo_snippet": "",
-      "google_fonts_url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
-    },
-  
-    "brand": {
-      "name": "OrthoWorks®",
-      "emoji": "🐺",
-      "niche_label": "multi-location orthodontic practices",
-      "primary_color": "#16074c",
-      "secondary_color": "#484e7f",
-      "accent_color": "#b94aa8",
-      "cta_color": "#b94aa8",
-      "highlight_color": "#35a5aa",
-      "highlight_light": "#e6f5f5",
-      "primary_light": "#f0eef6",
-      "accent_light": "#faf0f8",
-      "gradient_mid": "#2a1a5e",
-      "font_heading": "'Roboto',-apple-system,sans-serif",
-      "font_body": "'Roboto',-apple-system,sans-serif"
-    },
-  
-    "nav": {
-      "links": [
-        { "label": "Challenges", "href": "#challenges" },
-        { "label": "Solutions", "href": "#solutions" },
-        { "label": "Impact", "href": "#roi" }
-      ],
-      "cta_text": "Get Started",
-      "cta_url": "https://alphaagent.app"
-    },
-  
-    "hero": {
-      "badge": "Built for multi-location orthodontic practices",
-      "headline": "Your AI assistant for <span class='accent'>every location,</span> every patient.",
-      "subheadline": "OrthoWorks runs 11 locations, 7 specialists, and 60,000+ patients across the Bay Area. Alpha Agent handles the operational overhead — so your team can focus on beautiful smiles.",
-      "cta_primary_text": "Start Free Trial",
-      "cta_primary_url": "https://alphaagent.app",
-      "cta_secondary_text": "See How It Works",
-      "cta_secondary_href": "#solutions",
-      "stats": [
-        { "val": "11", "lbl": "Bay Area Locations" },
-        { "val": "60K+", "lbl": "Patients Served" },
-        { "val": "7", "lbl": "Specialists" },
-        { "val": "100+", "lbl": "Yrs Experience" }
-      ]
-    },
-  
-    "pain_points": {
-      "label": "The Challenge",
-      "title": "Multi-location orthodontics is <span style='color:var(--accent)'>operationally complex</span>",
-      "subtitle": "Every location means more calls, more scheduling conflicts, and more admin pulling your team away from patient care.",
-      "items": [
-        {
-          "icon": "📞",
-          "icon_bg": "accent_light",
-          "title": "Overwhelmed Front Desks",
-          "body": "Staff across 11 locations spend hours answering the same questions — hours, insurance, Invisalign pricing, availability."
-        },
-        {
-          "icon": "📅",
-          "icon_bg": "highlight_light",
-          "title": "Scheduling Chaos",
-          "body": "Coordinating 7 specialists across 11 offices creates constant back-and-forth. Patients fall through the cracks."
-        },
-        {
-          "icon": "🔄",
-          "icon_bg": "primary_light",
-          "title": "Follow-Up Gaps",
-          "body": "Post-consultation follow-ups and recall campaigns get deprioritized when the front desk is buried in daily ops."
-        },
-        {
-          "icon": "📊",
-          "icon_bg": "gold_light",
-          "title": "No Unified View",
-          "body": "Patient data in one system, scheduling in another, marketing in a third. No single view across all locations."
-        }
-      ]
-    },
-  
-    "chat_demo": {
-      "label": "Live Example",
-      "title": "Just ask <span style='color:var(--highlight)'>Alpha</span>",
-      "subtitle": "Your team talks to Alpha like a colleague. It handles the rest.",
-      "window_title": "Alpha Agent — OrthoWorks",
-      "messages": [
-        { "type": "user", "text": "How many new Invisalign consultations did we book across all locations this week?" },
-        { "type": "agent", "html": "<strong>This week across all 11 locations:</strong><br>📊 47 new Invisalign consultations booked<br>📈 Up 18% from last week<br>🏆 Top location: San Francisco Financial (12)<br>⚠️ Milpitas is down 30% — want me to draft a re-engagement campaign?" },
-        { "type": "user", "text": "Yes, and send appointment reminders for tomorrow's Cupertino schedule" },
-        { "type": "agent", "html": "<span class='done'>✅ Done.</span> Milpitas campaign drafted and queued for your review. 23 appointment reminders sent for tomorrow via SMS." },
-        { "type": "user", "text": "What's Dr. Shen's availability at the Mountain View office next week?" },
-        { "type": "agent", "html": "<strong>Dr. Shen — Mountain View, next week:</strong><br>📅 Tuesday 9am-12pm (3 slots open)<br>📅 Thursday 1pm-4pm (5 slots open)<br>Want me to block time or send a booking link to a patient?" }
-      ]
-    },
-  
-    "solutions": {
-      "label": "How Alpha Agent Helps",
-      "title": "One AI assistant across <span style='color:var(--highlight)'>every OrthoWorks location</span>",
-      "items": [
-        {
-          "num": "01",
-          "title": "24/7 Patient Communication",
-          "body": "Alpha answers patient questions instantly — treatment options, Invisalign FAQs, insurance details, office hours, directions — via your website, SMS, or WhatsApp. Your front desk handles fewer routine calls.",
-          "tag": "Reduces call volume by up to 40%"
-        },
-        {
-          "num": "02",
-          "title": "Smart Multi-Location Scheduling",
-          "body": "Patients request appointments naturally. Alpha checks Dr. Shen and all 7 specialists' availability across every Bay Area location, suggests the nearest open slot, and books it. No phone tag.",
-          "tag": "Works with your existing scheduling system"
-        },
-        {
-          "num": "03",
-          "title": "Automated Follow-Ups & Recalls",
-          "body": "Post-consultation follow-ups, treatment milestone reminders, 6-month recall notices — Alpha sends them on schedule via SMS or email, personalized per patient. Nothing falls through the cracks.",
-          "tag": "Never miss a follow-up again"
-        },
-        {
-          "num": "04",
-          "title": "Cross-Location Insights",
-          "body": "One dashboard across all 11 locations. Booking trends, consultation conversion rates, Invisalign vs. braces mix, staff utilization. Alpha surfaces insights you'd never find manually.",
-          "tag": "Real-time visibility across the practice"
-        },
-        {
-          "num": "05",
-          "title": "Internal Team Assistant",
-          "body": "\"What's our cancellation policy?\" \"When is Dr. Shen in Sunnyvale next?\" \"Pull up the Invisalign pricing sheet.\" Your staff asks Alpha anything — it knows your practice inside and out.",
-          "tag": "Onboard new staff in hours, not weeks"
-        }
-      ]
-    },
-  
-    "roi": {
-      "label": "The Impact",
-      "title": "What practices like yours <span style='color:var(--accent)'>typically see</span>",
-      "metrics": [
-        { "val": "40%", "lbl": "Fewer routine calls\nto front desk" },
-        { "val": "3x", "lbl": "Faster patient\nresponse time" },
-        { "val": "25%", "lbl": "More consultation\nbookings" },
-        { "val": "2min", "lbl": "To deploy across\nall locations" }
-      ]
-    },
-  
-    "integrations": {
-      "label": "Integrations",
-      "title": "Works with the tools <span style='color:var(--highlight)'>you already use</span>",
-      "subtitle": "140+ integrations. Connect your practice management, phones, messaging, and more.",
-      "items": [
-        "📱 SMS & WhatsApp",
-        "📧 Gmail & Outlook",
-        "📅 Google Calendar",
-        "💬 Slack",
-        "📞 Phone Systems",
-        "🦷 Practice Management",
-        "📊 Google Sheets",
-        "🔗 Custom APIs"
-      ]
-    },
-  
-    "security": {
-      "label": "Security",
-      "title": "Patient data <span style='color:var(--primary)'>demands the best</span>",
-      "subtitle": "Built on open-source technology with enterprise-grade isolation. Your data never leaves your container.",
-      "badges": [
-        { "icon": "🔒", "text": "Container Isolation", "color_var": "highlight" },
-        { "icon": "🔐", "text": "KMS Encryption", "color_var": "primary" },
-        { "icon": "📋", "text": "Full Audit Logs", "color_var": "accent" },
-        { "icon": "🛡️", "text": "HIPAA-Ready", "color_var": "gold" }
-      ]
-    },
-  
-    "cta": {
-      "label": "Ready?",
-      "title": "Let Alpha run the <span class='accent'>operations.</span><br>You run the <span class='accent'>practice.</span>",
-      "subtitle": "Deploy across all 11 OrthoWorks locations in minutes. No servers, no code, no hassle.",
-      "primary_text": "Get Started — Free Trial",
-      "primary_url": "https://alphaagent.app",
-      "secondary_text": "Request a Demo",
-      "secondary_url": "mailto:sales@alphaagent.app?subject=OrthoWorks%20Demo%20Request",
-      "fine_print": "Starts at $19/month · No credit card required · Cancel anytime"
-    },
-  
-    "footer": {
-      "business_name": "OrthoWorks®",
-      "alphaagent_url": "https://alphaagent.app",
-      "openclaw_url": "https://openclaw.ai"
-    }
+  "meta": {
+    "title": "MH Dental Anesthesia — In‑Office Anesthesia for Pediatric & Adult Patients",
+    "description": "MH Dental Anesthesia provides expert mobile dental anesthesia in San Francisco, CA. Safe, personalized care by a dual board‑certified Dentist Anesthesiologist.",
+    "gtm_id": "",
+    "apollo_snippet": "",
+    "google_fonts_url": "https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap"
+  },
+
+  "brand": {
+    "name": "MH Dental Anesthesia",
+    "emoji": "🩺",
+    "niche_label": "mobile dental anesthesia providers",
+    "primary_color": "#121314",
+    "secondary_color": "#758696",
+    "accent_color": "#eb5e28",
+    "cta_color": "#eb5e28",
+    "highlight_color": "#e97548",
+    "highlight_light": "#fdfdfe",
+    "primary_light": "#f0f0f0",
+    "accent_light": "#fff4ee",
+    "gradient_mid": "#1b1b1b",
+    "font_heading": "'Satoshi Variable',-apple-system,sans-serif",
+    "font_body": "'Satoshi Variable',-apple-system,sans-serif"
+  },
+
+  "nav": {
+    "links": [
+      { "label": "Challenges", "href": "#challenges" },
+      { "label": "Solutions", "href": "#solutions" },
+      { "label": "Impact", "href": "#roi" }
+    ],
+    "cta_text": "Request Consultation",
+    "cta_url": "https://mh-anesthesia.com/request-consultation"
+  },
+
+  "hero": {
+    "badge": "Mobile dental anesthesia for pediatric & adult patients",
+    "headline": "Safe, compassionate anesthesia — delivered in your dental office.",
+    "subheadline": "MH Dental Anesthesia provides advanced in‑office anesthesia care across the San Francisco Bay Area, including for patients with complex medical needs. Every plan is tailored and personally managed by Dr. Hurd.",
+    "cta_primary_text": "Request Consultation",
+    "cta_primary_url": "https://mh-anesthesia.com/request-consultation",
+    "cta_secondary_text": "Our Approach",
+    "cta_secondary_href": "#solutions",
+    "stats": [
+      { "val": "Dual", "lbl": "Board‑Certified" },
+      { "val": "Peds + Adult", "lbl": "Full‑Scope Care" },
+      { "val": "Complex", "lbl": "Medically‑Fragile Cases" },
+      { "val": "Bay Area", "lbl": "Mobile Coverage" }
+    ]
+  },
+
+  "pain_points": {
+    "label": "The Challenge",
+    "title": "Dental anesthesia must be <span style='color:var(--accent)'>safe, personal,</span> and seamless",
+    "subtitle": "Families and providers need confidence that every case is expertly planned, monitored, and supported — without added complexity for the dental team.",
+    "items": [
+      {
+        "icon": "😰",
+        "icon_bg": "accent_light",
+        "title": "Anxious Patients & Families",
+        "body": "Fear, sensory challenges, and prior bad experiences make dental care difficult without specialized anesthesia support."
+      },
+      {
+        "icon": "🧬",
+        "icon_bg": "highlight_light",
+        "title": "Complex Medical Histories",
+        "body": "Patients with medical complexity need individualized anesthetic plans, not one‑size‑fits‑all protocols."
+      },
+      {
+        "icon": "🏥",
+        "icon_bg": "primary_light",
+        "title": "Office Coordination Burden",
+        "body": "Dental teams need an anesthesia partner who handles prep, monitoring, and recovery — without disrupting clinic flow."
+      },
+      {
+        "icon": "✅",
+        "icon_bg": "gold_light",
+        "title": "Safety & Trust Expectations",
+        "body": "Families want clear communication, real‑time reassurance, and emergency‑ready preparedness at every step."
+      }
+    ]
+  },
+
+  "chat_demo": {
+    "label": "Live Example",
+    "title": "Ask <span style='color:var(--highlight)'>MH</span>",
+    "subtitle": "Get clear, compassionate answers — fast.",
+    "window_title": "MH Dental Anesthesia",
+    "messages": [
+      { "type": "user", "text": "Can you handle pediatric cases with sensory needs?" },
+      { "type": "agent", "html": "<strong>Yes.</strong> We routinely care for pediatric patients with sensory sensitivities and complex medical histories. Each plan is tailored and reviewed with families in advance." },
+      { "type": "user", "text": "Do you provide deep sedation for adults?" },
+      { "type": "agent", "html": "<span class='done'>✅</span> Yes — we offer moderate and deep sedation for adult procedures, with comprehensive monitoring throughout." }
+    ]
+  },
+
+  "solutions": {
+    "label": "How MH Helps",
+    "title": "A higher standard of <span style='color:var(--highlight)'>in‑office anesthesia care</span>",
+    "items": [
+      {
+        "num": "01",
+        "title": "Patient‑Centered Anesthetic Plans",
+        "body": "Every plan is designed around the individual — not a template. We listen first, explain clearly, and partner with families in decision‑making.",
+        "tag": "Tailored to every case"
+      },
+      {
+        "num": "02",
+        "title": "Inclusive & Accessible Care",
+        "body": "We welcome patients of all abilities, ages, and medical complexity — removing barriers whenever possible.",
+        "tag": "Support for every patient"
+      },
+      {
+        "num": "03",
+        "title": "Compassion Meets Clinical Excellence",
+        "body": "Advanced training, dual board certification, and decades of emergency medicine experience guide every procedure.",
+        "tag": "Expert‑led care"
+      },
+      {
+        "num": "04",
+        "title": "Safety Before, During, After",
+        "body": "Comprehensive monitoring, full emergency preparedness, and continuous vigilance ensure safety at every step.",
+        "tag": "Always prepared"
+      }
+    ]
+  },
+
+  "roi": {
+    "label": "The Impact",
+    "title": "What practices and families <span style='color:var(--accent)'>experience</span>",
+    "metrics": [
+      { "val": "Calm", "lbl": "Patients & Families" },
+      { "val": "Clear", "lbl": "Pre‑Op Communication" },
+      { "val": "Safe", "lbl": "Expert Monitoring" },
+      { "val": "Trusted", "lbl": "In‑Office Partner" }
+    ]
+  },
+
+  "integrations": {
+    "label": "Services",
+    "title": "Comprehensive anesthesia <span style='color:var(--highlight)'>for every need</span>",
+    "subtitle": "Serving pediatric and adult patients across the Bay Area with mobile, in‑office care.",
+    "items": [
+      "🧒 Pediatric Dental Anesthesia",
+      "🧑 Adult Dental Anesthesia",
+      "💉 Moderate Sedation",
+      "🛌 Deep Sedation",
+      "🩺 Ketamine Infusion Therapy",
+      "🏥 Medically Complex Patients",
+      "📍 Mobile, In‑Office Care",
+      "🧭 Bay Area Coverage"
+    ]
+  },
+
+  "security": {
+    "label": "Safety",
+    "title": "Your safety <span style='color:var(--primary)'>comes first</span>",
+    "subtitle": "Comprehensive monitoring and emergency‑ready preparedness are built into every case.",
+    "badges": [
+      { "icon": "🛡️", "text": "Emergency Preparedness", "color_var": "highlight" },
+      { "icon": "📋", "text": "Comprehensive Monitoring", "color_var": "primary" },
+      { "icon": "🤝", "text": "Family‑Centered Care", "color_var": "accent" },
+      { "icon": "✅", "text": "Personalized Plans", "color_var": "gold" }
+    ]
+  },
+
+  "cta": {
+    "label": "Ready?",
+    "title": "Feel confident in <span class='accent'>every procedure.</span><br>We’ll handle the anesthesia.",
+    "subtitle": "Schedule a consultation and we’ll tailor a plan for your patient or practice.",
+    "primary_text": "Request Consultation",
+    "primary_url": "https://mh-anesthesia.com/request-consultation",
+    "secondary_text": "Visit MH‑Anesthesia.com",
+    "secondary_url": "https://mh-anesthesia.com/",
+    "fine_print": "Serving the San Francisco Bay Area · Pediatric & adult care"
+  },
+
+  "footer": {
+    "business_name": "MH Dental Anesthesia",
+    "alphaagent_url": "https://alphaagent.app",
+    "openclaw_url": "https://openclaw.ai"
   }
+}
