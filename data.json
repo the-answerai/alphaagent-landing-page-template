@@ -3,7 +3,8 @@
       "title": "Alpha Agent for OrthoWorks® — AI That Runs Your Practice",
       "description": "See how Alpha Agent helps OrthoWorks automate patient communication, streamline scheduling, and reduce front-desk overhead across 11 Bay Area locations.",
       "gtm_id": "GTM-XXXXXXX",
-      "apollo_snippet": ""
+      "apollo_snippet": "",
+      "google_fonts_url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
     },
   
     "brand": {
@@ -17,7 +18,10 @@
       "highlight_color": "#35a5aa",
       "highlight_light": "#e6f5f5",
       "primary_light": "#f0eef6",
-      "accent_light": "#faf0f8"
+      "accent_light": "#faf0f8",
+      "gradient_mid": "#2a1a5e",
+      "font_heading": "'Roboto',-apple-system,sans-serif",
+      "font_body": "'Roboto',-apple-system,sans-serif"
     },
   
     "nav": {
