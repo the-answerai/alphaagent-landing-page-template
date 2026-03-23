@@ -30,150 +30,150 @@
       { "label": "Solutions", "href": "#solutions" },
       { "label": "Impact", "href": "#roi" }
     ],
-    "cta_text": "Request Consultation",
-    "cta_url": "https://mh-anesthesia.com/request-consultation"
+    "cta_text": "Book a Demo",
+    "cta_url": "https://alphaagent.app/book"
   },
 
   "hero": {
-    "badge": "Mobile dental anesthesia for pediatric & adult patients",
-    "headline": "Safe, compassionate anesthesia — delivered in your dental office.",
-    "subheadline": "MH Dental Anesthesia provides advanced in‑office anesthesia care across the San Francisco Bay Area, including for patients with complex medical needs. Every plan is tailored and personally managed by Dr. Hurd.",
-    "cta_primary_text": "Request Consultation",
-    "cta_primary_url": "https://mh-anesthesia.com/request-consultation",
-    "cta_secondary_text": "Our Approach",
+    "badge": "Alpha Agent for MH Dental Anesthesia",
+    "headline": "Answer every patient question — instantly, safely, and on‑brand.",
+    "subheadline": "Alpha Agent handles calls, FAQs, and scheduling requests for MH Dental Anesthesia so your team stays focused on clinical care. Every response is tailored to your protocols and tone.",
+    "cta_primary_text": "Book a Demo",
+    "cta_primary_url": "https://alphaagent.app/book",
+    "cta_secondary_text": "See How It Works",
     "cta_secondary_href": "#solutions",
     "stats": [
-      { "val": "Dual", "lbl": "Board‑Certified" },
-      { "val": "Peds + Adult", "lbl": "Full‑Scope Care" },
-      { "val": "Complex", "lbl": "Medically‑Fragile Cases" },
+      { "val": "24/7", "lbl": "Patient Support" },
+      { "val": "<90s", "lbl": "Avg Response" },
+      { "val": "HIPAA", "lbl": "Ready" },
       { "val": "Bay Area", "lbl": "Mobile Coverage" }
     ]
   },
 
   "pain_points": {
     "label": "The Challenge",
-    "title": "Dental anesthesia must be <span style='color:var(--accent)'>safe, personal,</span> and seamless",
-    "subtitle": "Families and providers need confidence that every case is expertly planned, monitored, and supported — without added complexity for the dental team.",
+    "title": "Anesthesia practices need <span style='color:var(--accent)'>trust, clarity,</span> and speed",
+    "subtitle": "Families need clear answers fast. Teams need fewer interruptions. Alpha Agent keeps every interaction consistent, accurate, and calm.",
     "items": [
       {
-        "icon": "😰",
+        "icon": "📞",
         "icon_bg": "accent_light",
-        "title": "Anxious Patients & Families",
-        "body": "Fear, sensory challenges, and prior bad experiences make dental care difficult without specialized anesthesia support."
+        "title": "High‑Volume FAQs",
+        "body": "Sedation options, eligibility, insurance, and prep questions flood the front desk every week."
       },
       {
         "icon": "🧬",
         "icon_bg": "highlight_light",
-        "title": "Complex Medical Histories",
-        "body": "Patients with medical complexity need individualized anesthetic plans, not one‑size‑fits‑all protocols."
+        "title": "Complex Patient Needs",
+        "body": "Medically fragile patients require precise, individualized explanations and careful intake."
       },
       {
-        "icon": "🏥",
+        "icon": "🧭",
         "icon_bg": "primary_light",
-        "title": "Office Coordination Burden",
-        "body": "Dental teams need an anesthesia partner who handles prep, monitoring, and recovery — without disrupting clinic flow."
+        "title": "Coordination Overhead",
+        "body": "Coordinating with multiple dental offices and families creates delays and missed follow‑ups."
       },
       {
         "icon": "✅",
         "icon_bg": "gold_light",
-        "title": "Safety & Trust Expectations",
-        "body": "Families want clear communication, real‑time reassurance, and emergency‑ready preparedness at every step."
+        "title": "Trust & Safety",
+        "body": "Families want confidence that every step is monitored, prepared, and handled by experts."
       }
     ]
   },
 
   "chat_demo": {
     "label": "Live Example",
-    "title": "Ask <span style='color:var(--highlight)'>MH</span>",
-    "subtitle": "Get clear, compassionate answers — fast.",
-    "window_title": "MH Dental Anesthesia",
+    "title": "Just ask <span style='color:var(--highlight)'>Alpha</span>",
+    "subtitle": "Patients and staff get the right answers in seconds.",
+    "window_title": "Alpha Agent — MH Dental Anesthesia",
     "messages": [
       { "type": "user", "text": "Can you handle pediatric cases with sensory needs?" },
-      { "type": "agent", "html": "<strong>Yes.</strong> We routinely care for pediatric patients with sensory sensitivities and complex medical histories. Each plan is tailored and reviewed with families in advance." },
+      { "type": "agent", "html": "<strong>Yes.</strong> We regularly care for pediatric patients with sensory sensitivities and complex medical histories. We’ll review your child’s needs in advance and tailor the plan." },
       { "type": "user", "text": "Do you provide deep sedation for adults?" },
-      { "type": "agent", "html": "<span class='done'>✅</span> Yes — we offer moderate and deep sedation for adult procedures, with comprehensive monitoring throughout." }
+      { "type": "agent", "html": "<span class='done'>✅</span> Yes — MH Dental Anesthesia provides moderate and deep sedation for adult procedures with comprehensive monitoring throughout." }
     ]
   },
 
   "solutions": {
-    "label": "How MH Helps",
-    "title": "A higher standard of <span style='color:var(--highlight)'>in‑office anesthesia care</span>",
+    "label": "How Alpha Agent Helps",
+    "title": "Automations that <span style='color:var(--highlight)'>run your front desk</span>",
     "items": [
       {
         "num": "01",
-        "title": "Patient‑Centered Anesthetic Plans",
-        "body": "Every plan is designed around the individual — not a template. We listen first, explain clearly, and partner with families in decision‑making.",
-        "tag": "Tailored to every case"
+        "title": "24/7 Patient Q&A",
+        "body": "Alpha answers common anesthesia questions instantly — eligibility, preparation, recovery, insurance, and office policies — across web chat, SMS, and email.",
+        "tag": "Reduces call volume"
       },
       {
         "num": "02",
-        "title": "Inclusive & Accessible Care",
-        "body": "We welcome patients of all abilities, ages, and medical complexity — removing barriers whenever possible.",
-        "tag": "Support for every patient"
+        "title": "Smart Intake & Scheduling",
+        "body": "Collects key medical details, flags risks, and routes requests to the right office or provider with full context.",
+        "tag": "Fewer back‑and‑forths"
       },
       {
         "num": "03",
-        "title": "Compassion Meets Clinical Excellence",
-        "body": "Advanced training, dual board certification, and decades of emergency medicine experience guide every procedure.",
-        "tag": "Expert‑led care"
+        "title": "Follow‑Ups & Reminders",
+        "body": "Automated pre‑op instructions, appointment reminders, and post‑op check‑ins — personalized per patient.",
+        "tag": "Improves preparedness"
       },
       {
         "num": "04",
-        "title": "Safety Before, During, After",
-        "body": "Comprehensive monitoring, full emergency preparedness, and continuous vigilance ensure safety at every step.",
-        "tag": "Always prepared"
+        "title": "Practice‑Specific Knowledge",
+        "body": "Alpha learns MH’s protocols, services, and tone so every response is accurate and on‑brand.",
+        "tag": "Always consistent"
       }
     ]
   },
 
   "roi": {
     "label": "The Impact",
-    "title": "What practices and families <span style='color:var(--accent)'>experience</span>",
+    "title": "What practices <span style='color:var(--accent)'>typically see</span>",
     "metrics": [
-      { "val": "Calm", "lbl": "Patients & Families" },
-      { "val": "Clear", "lbl": "Pre‑Op Communication" },
-      { "val": "Safe", "lbl": "Expert Monitoring" },
-      { "val": "Trusted", "lbl": "In‑Office Partner" }
+      { "val": "40%", "lbl": "Fewer routine calls" },
+      { "val": "3x", "lbl": "Faster response time" },
+      { "val": "24/7", "lbl": "Patient support" },
+      { "val": "<2 min", "lbl": "To deploy" }
     ]
   },
 
   "integrations": {
-    "label": "Services",
-    "title": "Comprehensive anesthesia <span style='color:var(--highlight)'>for every need</span>",
-    "subtitle": "Serving pediatric and adult patients across the Bay Area with mobile, in‑office care.",
+    "label": "Integrations",
+    "title": "Works with the tools <span style='color:var(--highlight)'>you already use</span>",
+    "subtitle": "Connect your phone system, scheduling, and messaging in minutes.",
     "items": [
-      "🧒 Pediatric Dental Anesthesia",
-      "🧑 Adult Dental Anesthesia",
-      "💉 Moderate Sedation",
-      "🛌 Deep Sedation",
-      "🩺 Ketamine Infusion Therapy",
-      "🏥 Medically Complex Patients",
-      "📍 Mobile, In‑Office Care",
-      "🧭 Bay Area Coverage"
+      "📱 SMS & WhatsApp",
+      "📧 Gmail & Outlook",
+      "📅 Google Calendar",
+      "📞 Phone Systems",
+      "📋 Intake Forms",
+      "🧾 Insurance Workflows",
+      "🔗 Custom APIs",
+      "🩺 EHR / PM Systems"
     ]
   },
 
   "security": {
-    "label": "Safety",
-    "title": "Your safety <span style='color:var(--primary)'>comes first</span>",
-    "subtitle": "Comprehensive monitoring and emergency‑ready preparedness are built into every case.",
+    "label": "Security",
+    "title": "Patient data <span style='color:var(--primary)'>handled responsibly</span>",
+    "subtitle": "Built for healthcare workflows with strong isolation and auditability.",
     "badges": [
-      { "icon": "🛡️", "text": "Emergency Preparedness", "color_var": "highlight" },
-      { "icon": "📋", "text": "Comprehensive Monitoring", "color_var": "primary" },
-      { "icon": "🤝", "text": "Family‑Centered Care", "color_var": "accent" },
-      { "icon": "✅", "text": "Personalized Plans", "color_var": "gold" }
+      { "icon": "🔒", "text": "HIPAA‑Ready", "color_var": "highlight" },
+      { "icon": "🧩", "text": "Container Isolation", "color_var": "primary" },
+      { "icon": "📋", "text": "Audit Logs", "color_var": "accent" },
+      { "icon": "🛡️", "text": "Encrypted Data", "color_var": "gold" }
     ]
   },
 
   "cta": {
     "label": "Ready?",
-    "title": "Feel confident in <span class='accent'>every procedure.</span><br>We’ll handle the anesthesia.",
-    "subtitle": "Schedule a consultation and we’ll tailor a plan for your patient or practice.",
-    "primary_text": "Request Consultation",
-    "primary_url": "https://mh-anesthesia.com/request-consultation",
-    "secondary_text": "Visit MH‑Anesthesia.com",
-    "secondary_url": "https://mh-anesthesia.com/",
-    "fine_print": "Serving the San Francisco Bay Area · Pediatric & adult care"
+    "title": "Let Alpha handle the <span class='accent'>front desk.</span><br>You handle the care.",
+    "subtitle": "Launch in days with MH’s policies, services, and tone fully embedded.",
+    "primary_text": "Book a Demo",
+    "primary_url": "https://alphaagent.app/book",
+    "secondary_text": "Request Consultation",
+    "secondary_url": "https://mh-anesthesia.com/request-consultation",
+    "fine_print": "Tailored for MH Dental Anesthesia · San Francisco Bay Area"
   },
 
   "footer": {
